@@ -1,22 +1,31 @@
 package assignment;
 
+import java.util.Scanner;
+
 class Question1A {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		double car = 5000;
-		double downPayment = 2000;
-		double principal = 3000;
-		double rate = 0.035;
-		int time = 5;
+		double car;
+		double downPayment;
+		double principal;
+		double rate;
+		double time;
+		
+		Scanner scanMe = new Scanner(System.in);  // scanMe is create new object for scanner input
+				
+		System.out.print("Enter the interest rate, for example, 3.5 : ");
+		double interestRate = scanMe.nextDouble();
+		rate = interestRate/100;
+		System.out.print("Enter the number of years as an integer, for example, 5 : ");
+		time = scanMe.nextDouble();
+		System.out.print("Enter the loan amount, for example, 3000.00 : ");
+		principal = scanMe.nextDouble();
 		
 		double Interest = principal * rate * time;
 		double monthlyPayment = principal * rate;
-		double totalPayment = monthlyPayment * (5 * 12);
+		double totalPayment = monthlyPayment * (time * 12);
 		
-		System.out.println("Enter the yearly interest rate : " + rate);
-		System.out.println("Enter the number of years as an integer : " + time);
-		System.out.println("Enter the loan amount : " + principal);
 		System.out.printf("The monthly payment is $%.2f ", monthlyPayment);
 		System.out.printf("\nThe total payment is $%.2f ", totalPayment);
 	}
