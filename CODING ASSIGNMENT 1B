@@ -53,21 +53,21 @@ class Question1B {
 		double discount = sum1 * discountRate;
 		double pricePaid = sum1 - discount;
 		if (sum1 >=100) 
-	  {  
-	  discount = (0.2*sum1);  
-	  pricePaid = sum1 - discount;
-	  System.out.printf("Total price : %.2f RM", sum1);
-	  System.out.printf("Discount received : %.2f RM", discount);
-	  System.out.printf("Price to be paid  : %.2f RM", pricePaid);
-	  } 
-	  else
-	  {  
-	  discount = (0.1 * sum1);  
-	  pricePaid = sum1 - discount;
-	  System.out.printf("Total price : %.2f RM", sum1);
-		System.out.printf("\nDiscount received : %.2f RM", discount);
-		System.out.printf("\nPrice to be paid  : %.2f RM", pricePaid);
-	  }
+	        {  
+	        discount = (0.2*sum1);  
+	        pricePaid = sum1 - discount;
+	        System.out.printf("Total price : RM%.2f", sum1);
+	        System.out.printf("\nDiscount received : RM%.2f", discount);
+	        System.out.printf("\nPrice to be paid  : RM%.2f", pricePaid);
+	        } 
+	        else
+	        {  
+	        discount = (0.1 * sum1);  
+	        pricePaid = sum1 - discount;
+	        System.out.printf("Total price : RM%.2f", sum1);
+		System.out.printf("\nDiscount received : RM%.2f", discount);
+		System.out.printf("\nPrice to be paid  : RM%.2f", pricePaid);
+	        }
 	}
 
 }
