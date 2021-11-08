@@ -1,0 +1,73 @@
+package assignment;
+
+import java.util.Scanner;
+
+class Question1B {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int number1; 
+		int number2;
+		int number3;
+		int number4;
+		double price1;
+		double price2;
+		double price3;
+		double discountRate = 0.2;
+		
+		double sum;
+		
+		Scanner scanMe = new Scanner(System.in);  // scanMe is create new object for scanner input
+		
+		System.out.print("Enter the number of items : ");
+		number1 = scanMe.nextInt();
+		
+		System.out.print("Enter price of first item : " + "RM");
+		price1 = scanMe.nextDouble();
+		
+		System.out.print("Enter quantity of first item : ");
+		number2 = scanMe.nextInt();
+		
+		System.out.println();
+		
+		System.out.print("Enter price of second item : " + "RM");
+		price2 = scanMe.nextDouble();
+		
+		System.out.print("Enter quantity of second item : ");
+		number3 = scanMe.nextInt();
+		
+		System.out.println();
+		
+		System.out.print("Enter price of third item : " + "RM");
+		price3 = scanMe.nextDouble();
+		
+		System.out.print("Enter quantity of first item : ");
+		number4 = scanMe.nextInt();
+		
+		System.out.println();
+		
+		double firstTotalPrice = price1 * number2; 
+		double secondTotalPrice = price2 * number3; 
+		double thirdTotalPrice = price3 * number4; 
+		double sum1 = firstTotalPrice + secondTotalPrice + thirdTotalPrice;
+		double discount = sum1 * discountRate;
+		double pricePaid = sum1 - discount;
+		if (sum1 >=100) 
+	  {  
+	  discount = (0.2*sum1);  
+	  pricePaid = sum1 - discount;
+	  System.out.printf("Total price : %.2f RM", sum1);
+	  System.out.printf("Discount received : %.2f RM", discount);
+	  System.out.printf("Price to be paid  : %.2f RM", pricePaid);
+	  } 
+	  else
+	  {  
+	  discount = (0.1 * sum1);  
+	  pricePaid = sum1 - discount;
+	  System.out.printf("Total price : %.2f RM", sum1);
+		System.out.printf("\nDiscount received : %.2f RM", discount);
+		System.out.printf("\nPrice to be paid  : %.2f RM", pricePaid);
+	  }
+	}
+
+}
