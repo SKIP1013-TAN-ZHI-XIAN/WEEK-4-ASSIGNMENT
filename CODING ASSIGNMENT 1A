@@ -1,0 +1,24 @@
+package assignment;
+
+class Question1A {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		double car = 5000;
+		double downPayment = 2000;
+		double principal = 3000;
+		double rate = 0.035;
+		int time = 5;
+		
+		double Interest = principal * rate * time;
+		double monthlyPayment = principal * rate;
+		double totalPayment = monthlyPayment * (5 * 12);
+		
+		System.out.println("Enter the yearly interest rate : " + rate);
+		System.out.println("Enter the number of years as an integer : " + time);
+		System.out.println("Enter the loan amount : " + principal);
+		System.out.printf("The monthly payment is $%.2f ", monthlyPayment);
+		System.out.printf("\nThe total payment is $%.2f ", totalPayment);
+	}
+
+}
